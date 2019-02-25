@@ -56,7 +56,7 @@ pingConsumer.on('message', function (message) {
     if (message.value === 'ping' || message.value == 'first') {
         console.log(`${message.value} at ${new Date().toUTCString()}`);
         setTimeout(() => {
-            payloads = [
+            const payloads = [
                 { topic: pongTopic, messages: `pong`, partition: 0 }
             ];
             pongProducer.send(payloads, function (err, data) {
@@ -82,7 +82,7 @@ pongConsumer.on('message', function (message) {
     if (message.value === 'pong') {
         console.log(`${message.value} at ${new Date().toUTCString()}`);
         setTimeout(() => {
-            payloads = [
+            const payloads = [
                 { topic: pingTopic, messages: `ping`, partition: 0 }
             ];
             pingProducer.send(payloads, function (err, data) {
