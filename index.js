@@ -7,7 +7,7 @@ const pongTopic = 'pong';
 
 // Set up ping producer, publish messages
 const pingProducerClient = new KafkaClient({kafkaHost: `${host}:${port}`}),
-      pingProducer = new Producer(pingProducerClient);
+      pingProducer = new Producer(pingProducerClient),
       payloads = [
           { topic: pingTopic, messages: `first`, partition: 0 }
       ];
