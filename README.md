@@ -18,4 +18,4 @@ npm start
 You will see ping pong responses in the console
 
 ## Licence
-MIT - (c) 2018 Cedrus LLC
+MIT - (c) 2019 Cedrus LLC
