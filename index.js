@@ -1,6 +1,6 @@
 const { Producer, Consumer, KafkaClient } = require('kafka-node');
 
-const host = 'localhost';
+const host = process.env.KAFKA_HOST || 'localhost';
 const port = '9092';
 const pingTopic = 'ping';
 const pongTopic = 'pong';
